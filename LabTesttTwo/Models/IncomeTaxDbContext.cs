@@ -24,6 +24,7 @@ namespace LabTesttTwo.Data
         #region Income Tax
 
         public DbSet<IncomeTax> IncomeTaxes { get; set; }
+        public DbSet<StudentRegistration> StudentRegistrations { get; set; }
         
         #endregion
     }
