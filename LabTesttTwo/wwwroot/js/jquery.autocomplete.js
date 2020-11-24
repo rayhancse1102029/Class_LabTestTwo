@@ -592,7 +592,7 @@
             callback(data);
         } else {
             var self = this;
-            var dataType = self.options.remoteDataType === 'json' ? 'json' : 'text';
+            var dataType = self.options.remoteDataType === 'OPUSERP' ? 'OPUSERP' : 'text';
             var ajaxCallback = function(data) {
                 var parsed = false;
                 if (data !== false) {
@@ -667,14 +667,14 @@
     $.Autocompleter.prototype.parseRemoteData = function(remoteData) {
         var remoteDataType;
         var data = remoteData;
-        if (this.options.remoteDataType === 'json') {
+        if (this.options.remoteDataType === 'OPUSERP') {
             remoteDataType = typeof(remoteData);
             switch (remoteDataType) {
                 case 'object':
                     data = remoteData;
                     break;
                 case 'string':
-                    data = $.parseJSON(remoteData);
+                    data = $.parseOPUSERP(remoteData);
                     break;
                 default:
                     throw new Error("Unexpected remote data type: " + remoteDataType);
