@@ -8,104 +8,106 @@
 
 <section>
     <div class="container-fluid">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="font-weight-bold">Student Registration</h5>
+        <form asp-controller="Student" asp-action="StudentRejestision" method="post">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="font-weight-bold">Student Registration</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">1.Name:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="name" id="name" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">2.Class:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="clsName" id="clsName" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">3.Dept/group:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="dept" id="dept" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">4.Roll:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="roll" id="roll" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">5.Father:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="father" id="father" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">6.Mother:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="mother" id="mother" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">7.Mobile Number:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="mobile" id="mobile" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-4">8.Email:</label>
+                                <div class="col-md-8">
+                                    <input type="text" name="email" id="email" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="row form-group">
+                                <label class="col-from-label col-md-4">Present:  </label>
+                                <div class="col-md-8">
+                                    <textarea rows="4" name="present" id="present" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="row form-group">
+                                <label class="col-from-label col-md-4">parmanent  </label>
+                                <div class="col-md-8">
+                                    <textarea rows="4" name="parmanent" id="parmanent" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success float-right">Submit</button>
+                </div>
             </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">1.Name:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="name" id="name" class="form-control" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">2.Class:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="clsName" id="clsName" class="form-control" required/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">3.Dept/group:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="dept" id="dept" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">4.Roll:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="roll" id="roll" class="form-control" required />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">5.Father:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="father" id="father" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">6.Mother:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="mother" id="mother" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">7.Mobile Number:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="mobile" id="mobile" class="form-control" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group row">
-                            <label class="col-md-4">8.Email:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="email" id="email" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="row form-group">
-                            <label class="col-from-label col-md-4">Present:  </label>
-                            <div class="col-md-8">
-                                <textarea rows="4" name="present" id="present" class="form-control" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div class="row form-group">
-                            <label class="col-from-label col-md-4">parmanent  </label>
-                            <div class="col-md-8">
-                                <textarea rows="4" name="parmanent" id="parmanent" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        </form>
     </div>
 </section>
 

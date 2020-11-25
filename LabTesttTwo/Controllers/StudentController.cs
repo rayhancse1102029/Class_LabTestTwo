@@ -46,8 +46,12 @@ namespace LabTesttTwo.Controllers
                     email = model.email,
                     present = model.present,
                     parmanent = model.parmanent,
-                    cretedAt = DateTime.Now;
+                    cretedAt = DateTime.Now
                 };
+
+                _context.StudentRegistrations.Add(student);
+                _context.SaveChanges();
+
             }
             else
             {
@@ -57,6 +61,12 @@ namespace LabTesttTwo.Controllers
 
             return View();
         }
+
+        public IActionResult StudentReg()
+        {
+            return View();
+        }
+
         //contolar end
     }
 
