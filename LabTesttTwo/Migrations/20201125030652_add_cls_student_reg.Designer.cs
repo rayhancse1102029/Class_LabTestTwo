@@ -4,14 +4,16 @@ using LabTesttTwo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LabTesttTwo.Migrations
 {
     [DbContext(typeof(IncomeTaxDbContext))]
-    partial class IncomeTaxDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201125030652_add_cls_student_reg")]
+    partial class add_cls_student_reg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -175,8 +177,6 @@ namespace LabTesttTwo.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("cls");
 
                     b.Property<string>("dept");
 

@@ -9,6 +9,7 @@ namespace LabTesttTwo.Models
     {
         public int id { set; get; }
         public string name { set; get; }
+        public string cls { set; get; }
         public string dept { set; get; }
         public string roll { set; get; }
         public string father { set; get; }

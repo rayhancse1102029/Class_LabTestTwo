@@ -12,6 +12,8 @@ namespace LabTesttTwo.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { set; get; }
+
+        public string cls { set; get; }
         public string name { set; get; }
         public string dept { set; get; }
         public string roll { set; get; }
