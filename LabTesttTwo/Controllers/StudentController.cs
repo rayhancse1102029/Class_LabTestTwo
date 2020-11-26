@@ -67,6 +67,27 @@ namespace LabTesttTwo.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult StudentReg(StudentRegViewModel model)
+        {
+            StudentReg student = new StudentReg
+            {
+                name = model.name,
+                cls = model.cls,
+                dept = model.dept,
+                roll = model.roll,
+                father = model.father,
+                mother = model.mother,
+                mobile = model.mobile,
+                email = model.email,
+                present = model.present,
+                parmanent = model.parmanent
+            };
+
+            _context.StudentRegs.Add(student);
+            _context.SaveChanges();
+            return View();
+        }
         //contolar end
     }
 

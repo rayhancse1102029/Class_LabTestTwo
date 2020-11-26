@@ -74,5 +74,9 @@ namespace LabTesttTwo.Controllers
         {
             return View();
         }
+        public IActionResult StudentImpor()
+        {
+            return View();
+        }
     }
 }
